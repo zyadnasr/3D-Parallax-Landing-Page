@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;800&display=swap");
+
+*,
+*::after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+::selection {
+    background-color: #0b372dbb;
+}
+.logo {
+    width: 100px;
+    transition: 1s;
+}
+
+header {
+    position: absolute;
+    z-index: 9999;
+    padding: .9rem 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 1s;
+}
+
+header nav {
+    max-width: 97%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    transition: 1s;
+    a{
+        text-decoration: none;
+        padding: 0 1.5rem;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 300;
+        font-size: .83rem;
+        transition: 1s;
+    }
+}
+
+.search a {
+    font-size: 1.05rem;
+    padding: 0 3rem;
+    transition: 1s;
+}
+.hamburger {
+    cursor: pointer;
+}
+
+.hamburger input {
+    display: none;
+}
+
+.hamburger svg {
+    /* The size of the SVG defines the overall size */
+    height: 3em;
+    /* Define the transition for transforming the SVG */
+    -webkit-transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line {
+    fill: none;
+    stroke: white;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 3;
+    /* Define the transition for transforming the Stroke */
+    -webkit-transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+                stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.line-top-bottom {
+    stroke-dasharray: 12 63;
+}
+
+.hamburger input:checked + svg {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+}
+
+.hamburger input:checked + svg .line-top-bottom {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: -32.42;
+}
+
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.parallax {
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    transition: .45s cubic-bezier(.2, .49, .32, .99);
+}
+.bg-img {
+    width: 2800px;
+    top: calc(50% - 320px);
+    left: calc(50% + 10px);
+    z-index: 1;
+}
+.fog-7 {
+    width: 1900px;
+    top: calc(50% - 100px);
+    left: calc(50% + 300px);
+    z-index: 2;
+}
+.mountain-10 {
+    z-index: 3;
+    top: calc(50% + 69px);
+    width: 870px;
+    left: calc(50% + 230px);
+}
+.fog-6 {
+    z-index: 4;
+    top: calc(50% + 95px);
+    left: calc(50% + 7px);
+    width: 1833px;
+}
+.mountain-9 {
+    z-index: 5;
+    top: calc(50% + 119px);
+    width: 463px;
+    left: calc(50% - 457px);
+}
+.mountain-8 {
+    z-index: 6;
+    top: calc(50% + 96px);
+    width: 786px;
+    left: calc(50% - 202px);
+}
+.fog-5 {
+    z-index: 7;
+    top: calc(50% + 171px);
+    left: calc(50% + 29px);
+    width: 449px;
+}
+.mountain-7 {
+    z-index: 8;
+    width: 515px;
+    top: calc(50% + 134px);
+    left: calc(50% + 305px);
+}
+.text {
+    z-index: 9;
+    top: calc(50% - 130px);
+    left: 50%;
+    text-transform: uppercase;
+    text-align: center;
+    pointer-events: auto;
+    color: #fff;
+    transition: 1s;
+    h2{
+        font-weight: 100;
+        font-size: 6.5rem;
+        line-height: .88;
+        transition: 1s;
+    }
+    h1 {
+        font-weight: 800;
+        font-size: 8rem;
+        line-height: .88;
+        transition: 1s;
+    }
+}
+.mountain-6 {
+    z-index: 10;
+    top: calc(50% + 86.5px);
+    width: 383.5px;
+    left: calc(50% + 590px);
+}
+.fog-4 {
+    z-index: 11;
+    top: calc(50% + 242px);
+    left: calc(50% - 64px);
+    width: 543px;
+}
+.mountain-5 {
+    z-index: 12;
+    top: calc(50% + 269px);
+    width: 583px;
+    left: calc(50% + 130px);
+}
+.fog-3 {
+    z-index: 13;
+    top: calc(50% + 149px);
+    left: calc(50% - 28px);
+    width: 1435px;
+}
+.mountain-4 {
+    z-index: 14;
+    top: calc(50% + 181px);
+    width: 717px;
+    left: calc(50% - 381.5px);
+}
+.mountain-3 {
+    z-index: 15;
+    top: calc(50% + 133px);
+    left: calc(50% + 736px);
+    width: 419px;
+}
+.fog-2 {
+    z-index: 16;
+    top: calc(50% + 177px);
+    left: calc(50% - 30px);
+    width: 1418px;
+}
+.mountain-2{
+    z-index: 17;
+    top: calc(50% + 180px);
+    left: calc(50% + 412px);
+    width: 625px;
+}
+.mountain-1 {
+    z-index: 18;
+    top: calc(50% + 70px);
+    left: calc(50% - 630px);
+    width: 450px;
+}
+.sun-rays {
+    position: absolute;
+    z-index: 19;
+    top: 0;
+    right: 0;
+    width: 595px;
+    pointer-events: none;
+}
+.black-shadow {
+    position: absolute;
+    z-index: 20;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    pointer-events: none;
+}
+.fog-1 {
+    z-index: 21;
+    top: calc(100% - 355px);
+    left: 50%;
+    width: 1600px;
+}
+.vignette {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(ellipse at center, rgba(0,0,0,0) 65%, rgba(0,0,0,0.7));
+    pointer-events: none;
+}
+
+@media (max-width: 1100px) {
+    .text {
+        h1{
+            font-size: 5.8rem;
+        }
+        h2{
+            font-size: 4.7rem;
+        }
+    }
+}
+@media (max-width: 725px) {
+    .text {
+        h1{
+            font-size: 5rem;
+            line-height: 1.1;
+        }
+        h2{
+            font-size: 4.1rem;
+            line-height: 1.1;
+        }
+    }
+    header {
+        nav {
+            padding: 0 1rem;
+        }
+        ul{
+            a{
+                font-size: .73rem;
+                padding: 0 .9rem;
+            }
+        }
+    }
+    .logo {
+        width: 75px;
+    }
+    .search a{
+        font-size: .85rem;
+        padding: 0 1.8rem;
+    }
+    .hamburger {
+        padding-left: .9rem;
+        a{
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .text {
+        h1{
+            font-size: 3.3rem;
+        }
+        h2{
+            font-size: 2.6rem;
+        }
+    }
+}
